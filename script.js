@@ -1,32 +1,52 @@
+let opc = parseInt(prompt('Escolha o exercicio \n' + 
+    '1 - Exericio 1\n' + 
+    '2 - Exercicio 2\n' +
+    '2 - Exercicio 3'
+))
+
+switch (opc) {
+    case 1:
+        ex1();
+        break;
+    case 2:
+        ex2();
+        break;
+    case 3:
+        ex3();
+        break;
+}
+
 // Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
 
-let estudantes = [];
-let name;
+function ex1(){
+    let estudantes = [];
+    let name;
 
-while(true){
-    name = prompt('Digite o nome do estudante')
+    while(true){
+        name = prompt('Digite o nome do estudante')
 
-    if(name === 'PARE' || name === null){
-        break;
+        if(name === 'PARE' || name === null){
+            break;
+        }
+        
+        estudantes.push(name);
     }
-    
-    alert('Lista de compras finalizada');
-    estudantes.push(name);
-}
 
-alert(estudantes);
+    alert(estudantes);
+}
 
 //Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. Verifique se o planeta que o usuário informou está na array e informe ao usuário.
-let planets = ['Terra', 'Marte', 'Plutao', 'Venus', 'Jupiter', 'Saturno'];
+function ex2(){
+    let planets = ['Terra', 'Marte', 'Plutao', 'Venus', 'Jupiter', 'Saturno'];
 
-let nomePlaneta = prompt('Digite o nome do planeta');
+    let nomePlaneta = prompt('Digite o nome do planeta');
 
-if (planets.includes(nomePlaneta)) {
-    alert('Planeta encontrado!');
-} else {
-    alert('Planeta não encontrado!');
+    if (planets.includes(nomePlaneta)) {
+        alert('Planeta encontrado!');
+    } else {
+        alert('Planeta não encontrado!');
+    }
 }
-
 // Vamos criar uma lista de compras. 
 
 /* Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas.
@@ -35,9 +55,11 @@ if (planets.includes(nomePlaneta)) {
  Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". 
  Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada". */
 
-let frutas = ['maca', 'banana', 'uva', 'morango'];
 
-while(frutas.length > 0){
+function ex3(){
+ let frutas = ['maca', 'banana', 'uva', 'morango'];
+
+    while(frutas.length > 0){
     let frutaUsuario = prompt('Digite o nome da fruta');
 
     if(frutas.includes(frutaUsuario)){
@@ -49,6 +71,8 @@ while(frutas.length > 0){
 
     alert(frutas);
 }
+}
+
 
 
 
