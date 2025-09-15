@@ -44,7 +44,6 @@ while(frutas.length > 0){
         let index = frutas.indexOf(frutaUsuario);
         frutas.splice(index, 1);    
     } else {
-        alert('Fruta indisponivel');
         alert('fruta indisponivel no mercado');
     }
 
