@@ -40,16 +40,15 @@ let frutas = ['maca', 'banana', 'uva', 'morango'];
 while(frutas.length > 0){
     let frutaUsuario = prompt('Digite o nome da fruta');
 
-    if(!frutas.includes(frutaUsuario)){
+    if(frutas.includes(frutaUsuario)){
+        let index = frutas.indexOf(frutaUsuario);
+        frutas.splice(index, 1);    
+    } else {
         alert('Fruta indisponivel');
-        frutaUsuario = prompt('Digite o nome da fruta');
+        alert('fruta indisponivel no mercado');
     }
-    
-    let index = frutas.indexOf(frutaUsuario);
-    frutas.splice(index, 1);
 
     alert(frutas);
-
 }
 
 
